@@ -36,14 +36,17 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.panelLeft = new System.Windows.Forms.Panel();
+            this.panelRight = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.button_view_F3 = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -100,7 +103,7 @@
             this.panel1.Controls.Add(this.splitContainer1);
             this.panel1.Location = new System.Drawing.Point(12, 77);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1134, 467);
+            this.panel1.Size = new System.Drawing.Size(1134, 503);
             this.panel1.TabIndex = 3;
             // 
             // splitContainer1
@@ -111,36 +114,57 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.panel2);
+            this.splitContainer1.Panel1.Controls.Add(this.panelLeft);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.panel3);
-            this.splitContainer1.Size = new System.Drawing.Size(1134, 467);
+            this.splitContainer1.Panel2.Controls.Add(this.panelRight);
+            this.splitContainer1.Size = new System.Drawing.Size(1134, 503);
             this.splitContainer1.SplitterDistance = 568;
             this.splitContainer1.TabIndex = 0;
             // 
+            // panelLeft
+            // 
+            this.panelLeft.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelLeft.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panelLeft.Location = new System.Drawing.Point(3, 3);
+            this.panelLeft.Name = "panelLeft";
+            this.panelLeft.Size = new System.Drawing.Size(550, 497);
+            this.panelLeft.TabIndex = 0;
+            this.panelLeft.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLeft_Paint);
+            // 
+            // panelRight
+            // 
+            this.panelRight.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelRight.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.panelRight.Location = new System.Drawing.Point(14, 3);
+            this.panelRight.Name = "panelRight";
+            this.panelRight.Size = new System.Drawing.Size(550, 497);
+            this.panelRight.TabIndex = 0;
+            // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel2.Controls.Add(this.button_view_F3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 583);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(550, 461);
-            this.panel2.TabIndex = 0;
+            this.panel2.Size = new System.Drawing.Size(1158, 34);
+            this.panel2.TabIndex = 4;
             // 
-            // panel3
+            // button_view_F3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.panel3.Location = new System.Drawing.Point(14, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(550, 461);
-            this.panel3.TabIndex = 0;
+            this.button_view_F3.Location = new System.Drawing.Point(12, 1);
+            this.button_view_F3.Name = "button_view_F3";
+            this.button_view_F3.Size = new System.Drawing.Size(75, 31);
+            this.button_view_F3.TabIndex = 0;
+            this.button_view_F3.Text = "F3 View";
+            this.button_view_F3.UseVisualStyleBackColor = true;
+            this.button_view_F3.Click += new System.EventHandler(this.button_view_F3_Click);
             // 
             // mainWindow
             // 
@@ -148,7 +172,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1158, 581);
+            this.ClientSize = new System.Drawing.Size(1158, 617);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
@@ -157,6 +182,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "mainWindow";
             this.Text = "WinManager";
+            this.Load += new System.EventHandler(this.mainWindow_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -164,6 +190,7 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,8 +205,10 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Panel panelLeft;
+        private System.Windows.Forms.Panel panelRight;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button_view_F3;
     }
 }
 

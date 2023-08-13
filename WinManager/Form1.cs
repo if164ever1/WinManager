@@ -46,5 +46,10 @@ namespace WinManager
             Button button = sender as Button;
             MessageBox.Show(button.Text + "was clicked");
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

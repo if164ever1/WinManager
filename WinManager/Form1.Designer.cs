@@ -40,13 +40,19 @@
             this.panelRight = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button_view_F3 = new System.Windows.Forms.Button();
+            this.button_edit_F4 = new System.Windows.Forms.Button();
+            this.button_copy_F5 = new System.Windows.Forms.Button();
+            this.button_move_F6 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button_delet_F8 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -149,7 +155,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel2.Controls.Add(this.button_view_F3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 583);
             this.panel2.Name = "panel2";
@@ -158,13 +163,99 @@
             // 
             // button_view_F3
             // 
-            this.button_view_F3.Location = new System.Drawing.Point(12, 1);
+            this.button_view_F3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_view_F3.Location = new System.Drawing.Point(3, 3);
             this.button_view_F3.Name = "button_view_F3";
-            this.button_view_F3.Size = new System.Drawing.Size(75, 31);
+            this.button_view_F3.Size = new System.Drawing.Size(124, 27);
             this.button_view_F3.TabIndex = 0;
             this.button_view_F3.Text = "F3 View";
             this.button_view_F3.UseVisualStyleBackColor = true;
             this.button_view_F3.Click += new System.EventHandler(this.button_view_F3_Click);
+            // 
+            // button_edit_F4
+            // 
+            this.button_edit_F4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_edit_F4.Location = new System.Drawing.Point(133, 3);
+            this.button_edit_F4.Name = "button_edit_F4";
+            this.button_edit_F4.Size = new System.Drawing.Size(124, 27);
+            this.button_edit_F4.TabIndex = 0;
+            this.button_edit_F4.Text = "F4 Edit";
+            this.button_edit_F4.UseVisualStyleBackColor = true;
+            this.button_edit_F4.Click += new System.EventHandler(this.button_view_F3_Click);
+            // 
+            // button_copy_F5
+            // 
+            this.button_copy_F5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_copy_F5.Location = new System.Drawing.Point(263, 3);
+            this.button_copy_F5.Name = "button_copy_F5";
+            this.button_copy_F5.Size = new System.Drawing.Size(124, 27);
+            this.button_copy_F5.TabIndex = 0;
+            this.button_copy_F5.Text = "F5 Copy";
+            this.button_copy_F5.UseVisualStyleBackColor = true;
+            this.button_copy_F5.Click += new System.EventHandler(this.button_view_F3_Click);
+            // 
+            // button_move_F6
+            // 
+            this.button_move_F6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_move_F6.Location = new System.Drawing.Point(393, 3);
+            this.button_move_F6.Name = "button_move_F6";
+            this.button_move_F6.Size = new System.Drawing.Size(124, 27);
+            this.button_move_F6.TabIndex = 0;
+            this.button_move_F6.Text = "F6 Move";
+            this.button_move_F6.UseVisualStyleBackColor = true;
+            this.button_move_F6.Click += new System.EventHandler(this.button_view_F3_Click);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(523, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(124, 27);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "F7 NewFolder";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button_view_F3_Click);
+            // 
+            // button_delet_F8
+            // 
+            this.button_delet_F8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_delet_F8.Location = new System.Drawing.Point(653, 3);
+            this.button_delet_F8.Name = "button_delet_F8";
+            this.button_delet_F8.Size = new System.Drawing.Size(124, 27);
+            this.button_delet_F8.TabIndex = 0;
+            this.button_delet_F8.Text = "F8 Delet";
+            this.button_delet_F8.UseVisualStyleBackColor = true;
+            this.button_delet_F8.Click += new System.EventHandler(this.button_view_F3_Click);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 6;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.Controls.Add(this.button_delet_F8, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button_move_F6, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button1, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button_copy_F5, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button_edit_F4, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button_view_F3, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(192, 584);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(780, 33);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // mainWindow
             // 
@@ -173,6 +264,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1158, 617);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
@@ -190,7 +282,7 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,6 +301,12 @@
         private System.Windows.Forms.Panel panelRight;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button_view_F3;
+        private System.Windows.Forms.Button button_move_F6;
+        private System.Windows.Forms.Button button_copy_F5;
+        private System.Windows.Forms.Button button_edit_F4;
+        private System.Windows.Forms.Button button_delet_F8;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
 
